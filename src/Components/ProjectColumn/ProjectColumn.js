@@ -4,13 +4,15 @@ import React, { useEffect } from 'react';
 
 const ProjectColumn = () => {
 
-    for (const project of DataProjects){
-        console.log(project.name);
+    const redirectionUrlForProject = (project) => {
+        // console.log(project)
+        const projectName = project
+        //Supprime les espaces
+        const nameClean = projectName.replace(/ /g, "")
+        //Supprime les majuscules
+        const nameCleanLower = nameClean.toLowerCase()
+        document.location.href= document.location.origin + "/" + nameCleanLower; 
     }
-    
-    useEffect(() => {
-        console.log(DataProjects)
-      },[]);
 
     return (
         <div id='ProjectColumn'>
@@ -19,7 +21,7 @@ const ProjectColumn = () => {
             </div>
             <ul className='ProjectColumn_List'>
                 {DataProjects.map((project, index) => {
-                    return <li className='ProjectColumn_List_project' key={index}>{project.name}</li>
+                    return <li className='ProjectColumn_List_project' key={index} onClick={() => redirectionUrlForProject(project.name)}>{project.name}</li>
                 })}
             </ul>
         </div>
