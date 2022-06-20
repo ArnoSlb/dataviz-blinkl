@@ -1,0 +1,31 @@
+#ProjectColumn{
+    width: 20vw;
+    height: 92vh;
+    background-color: #282C2F;
+    border-right: 2px solid #3D4447;
+}
+
+.ProjectColumn_Header{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #3D4447;
+    margin-bottom: 10px;
+}
+
+.ProjectColumn_Header h1{
+    margin-left: 30px;
+}
+
+.ProjectColumn_List_project{
+    padding: 7px;
+    padding-left: 30px;
+}
+
+.ProjectColumn_List_project:hover{
+    background-color: #fceb50;
+    color: #282C2F;
+    font-weight: bold;
+    cursor: pointer;
+}
