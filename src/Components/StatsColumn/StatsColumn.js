@@ -9,6 +9,7 @@ const StatColumn = () => {
 
     const [projectSelected, setProjectSelected] = useState(DataProjects);
     const [projectGraphs, setProjectGraphs] = useState(DataProjects[0].graphs);
+    const [projectMaps, setProjectMaps] = useState(DataProjects[0].maps);
 
     const Params = useParams()
     
@@ -21,9 +22,11 @@ const StatColumn = () => {
             // console.log(projectToShow)
             //On met dans une variable le tableau des graphs à montrer coresspond au bon projet
             let graphsToShow = projectToShow[0].graphs
+            let mapsToShow = projectToShow[0].maps
             // 
             //On donne cette nouvelle valeur au state projectGraphs
             setProjectGraphs(graphsToShow)
+            setProjectMaps(mapsToShow)
         }
 
         const projectData = DataProjects.filter(Project => Project.url === Params.project)
@@ -57,6 +60,16 @@ const StatColumn = () => {
                                     frameBorder='0' 
                                     scrolling='no' 
                                     style={{width: "45%", height: "300px", borderRadius: "20px"}}>
+                               </iframe>        
+                    })}
+                {projectMaps.map((project, index) => {
+                        return <iframe 
+                                    key={index} 
+                                    title='Interactive or visual content' 
+                                    src={project.src}
+                                    frameBorder='0' 
+                                    scrolling='no' 
+                                    style={{width: "65%", height: "60vh", borderRadius: "20px"}}>
                                </iframe>        
                     })}
             </div>

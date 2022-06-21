@@ -25,6 +25,8 @@ const DataProjects = [
                 width : "50%", 
                 height : "300px"
             },
+        ],
+        maps: [
             {
                 src: 'https://flo.uri.sh/visualisation/10415264/embed',
                 width : "50%", 
@@ -42,9 +44,8 @@ const DataProjects = [
         year: '2022',
         scans: '0',
         url: 'grandpalais',
-        graphs: [
-
-        ]
+        graphs: [],
+        maps:[]
     }
 ]
 export default DataProjects
