@@ -12,7 +12,7 @@ const StatColumn = () => {
     const Params = useParams()
     
     useEffect(() => {
-        console.log(Params.project)
+        // console.log(Params.project)
         setProjectSelected(Params.project)
     },[Params])
 

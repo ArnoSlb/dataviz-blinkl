@@ -29,3 +29,15 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.ProjectColumn_List_project a{
+    display: inline;
+}
+
+.ProjectColumn_selected{
+    background-color: #fceb50;
+    color:  #282C2F !important;
+    font-weight: bold;
+    border-top: 1px solid #282C2F;
+    border-bottom: 1px solid #282C2F;
+}
