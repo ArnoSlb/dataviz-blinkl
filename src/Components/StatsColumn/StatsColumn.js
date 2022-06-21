@@ -7,7 +7,7 @@ import "./StatsColumn.css"
 
 const StatColumn = () => {
 
-    const [projectSelected, setProjectSelected] = useState();
+    const [projectSelected, setProjectSelected] = useState(DataProjects);
     const [projectGraphs, setProjectGraphs] = useState(DataProjects[0].graphs);
 
     const Params = useParams()
@@ -26,14 +26,26 @@ const StatColumn = () => {
             setProjectGraphs(graphsToShow)
         }
 
-        setProjectSelected(Params.project)
+        const projectData = DataProjects.filter(Project => Project.url === Params.project)
+        setProjectSelected(projectData)
         getGraphs(Params.project)
     },[Params])
 
     return(
         <div id='StatColumn'>
             <div className='StatColumn_header'>
-                <h1>{projectSelected}</h1>   
+                <div className='StatBox'>
+                    <p>Nom du projet</p>
+                    <h1>{projectSelected[0].name}</h1>
+                </div>
+                <div className='StatBox'>
+                    <p>Année du projet</p>
+                    <h1>{projectSelected[0].year}</h1>
+                </div>
+                <div className='StatBox'>
+                    <p>Nbre de scans</p>
+                    <h1>{projectSelected[0].scans}</h1>
+                </div>
             </div>
             <div className='Graphs_container'>
                 {projectGraphs.map((project, index) => {

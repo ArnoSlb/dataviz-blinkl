@@ -2,6 +2,7 @@
     width: calc( 80vw - 3% );
     height: 100%;
     padding: 30px 3%;
+    overflow: auto;
 }
 
 .Graphs_container{
@@ -10,4 +11,38 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
+
+.StatColumn_header{
+    display: flex;
+    justify-content: center;
+}
+
+.StatBox{
+    background-color: #282C2F;
+    width: 180px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-right: 30px;
+}
+
+.StatBox p{
+    color: #e6e6e6;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.StatBox h1{
+    font-weight: bold;
+}
+
+.Graphs_container iframe{
+    margin: 1.5vh 0;
+ }
+
