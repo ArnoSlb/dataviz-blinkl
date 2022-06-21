@@ -4,7 +4,16 @@ const DataProjects = [
         year: '2022',
         url: 'yellowkorner',
         graphs: [
-            '<div class="flourish-embed flourish-chart" data-src="visualisation/10402622"><script src="https://public.flourish.studio/resources/embed.js"></script></div>',
+            {
+                src: 'https://flo.uri.sh/visualisation/10402622/embed',
+                width : "50%", 
+                height : "300px"
+            },
+            {
+                src: 'https://flo.uri.sh/visualisation/10413278/embed',
+                width : "50%", 
+                height : "300px"
+            }
         ]
     },
     {

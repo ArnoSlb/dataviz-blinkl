@@ -1,3 +1,13 @@
-#StatsColumn{
+#StatColumn{
+    width: calc( 80vw - 3% );
+    height: 100%;
+    padding: 30px 3%;
+}
+
+.Graphs_container{
+    height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
