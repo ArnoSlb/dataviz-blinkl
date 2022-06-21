@@ -1,5 +1,6 @@
 import './App.css';
 import StatsScreen from './Components/StatsScreen/StatsScreen'
+import StatsScreenHome from './Components/StatsScreenHome/StatsScreenHome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div className="App">
         <Routes>  
           <Route path="/:project" element={<StatsScreen/>}/>
+          <Route path="/" element={<StatsScreenHome/>}/>
         </Routes>
       </div>
     </Router>

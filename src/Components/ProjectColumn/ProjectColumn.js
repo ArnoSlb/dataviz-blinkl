@@ -16,7 +16,10 @@ const ProjectColumn = () => {
         projectsList.forEach(element => element.classList.remove('ProjectColumn_selected'))
 
         let elementSelected = document.getElementById(Params.project)
-        elementSelected.classList.add('ProjectColumn_selected')
+        if(elementSelected != null){
+            elementSelected.classList.add('ProjectColumn_selected')
+        }
+        
 
     },[Params])
 
