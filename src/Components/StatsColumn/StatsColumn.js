@@ -12,13 +12,28 @@ const StatColumn = () => {
     const [projectMaps, setProjectMaps] = useState(DataProjects[0].maps);
 
     const Params = useParams()
+
+
+    //Animate Number Spin
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          obj.innerHTML = Math.floor(progress * (end - start) + start);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          }
+        };
+        window.requestAnimationFrame(step);
+    }
     
     useEffect(() => {
 
         const getGraphs = (urlInBrowser) => {
             // console.log(Params.project, DataProjects)
             //On filtre le tableau de DataProjects et on cherche dans un sous-tableau avec une catégorie "url" qui est égale au parametre inscrit dans l'adress url du navigateur clieny
-            const projectToShow = DataProjects.filter(Project => Project.url === urlInBrowser)
+            let projectToShow = DataProjects.filter(Project => Project.url === urlInBrowser)
             // console.log(projectToShow)
             //On met dans une variable le tableau des graphs à montrer coresspond au bon projet
             let graphsToShow = projectToShow[0].graphs
@@ -30,8 +45,12 @@ const StatColumn = () => {
         }
 
         const projectData = DataProjects.filter(Project => Project.url === Params.project)
+        const projectScansNb = projectData[0].scans
         setProjectSelected(projectData)
         getGraphs(Params.project)
+          
+        const obj = document.getElementById("value");
+        animateValue(obj, 0, projectScansNb, 2000);
     },[Params])
 
     return(
@@ -47,7 +66,7 @@ const StatColumn = () => {
                 </div>
                 <div className='StatBox'>
                     <p>Nbre de scans</p>
-                    <h1>{projectSelected[0].scans}</h1>
+                    <h1 id='value'>{projectSelected[0].scans}</h1>
                 </div>
             </div>
             <div className='Graphs_container'>
