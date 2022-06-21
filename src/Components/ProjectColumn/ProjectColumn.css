@@ -25,7 +25,7 @@
 
 .ProjectColumn_List_project:hover{
     background-color: #fceb50;
-    color: #282C2F;
+    color:  #282C2F !important;
     font-weight: bold;
     cursor: pointer;
 }

@@ -1,8 +1,19 @@
 import './ProjectColumn.css'
 import DataProjects from '../../data/data';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 
 const ProjectColumn = () => {
+
+    const [projectSelected, setProjectSelected] = useState();
+
+    const Params = useParams()
+    
+    useEffect(() => {
+        console.log(Params.project)
+        setProjectSelected(Params.project)
+
+    },[Params])
 
     const redirectionUrlForProject = (project) => {
         // console.log(project)
@@ -11,7 +22,8 @@ const ProjectColumn = () => {
         const nameClean = projectName.replace(/ /g, "")
         //Supprime les majuscules
         const nameCleanLower = nameClean.toLowerCase()
-        document.location.href= document.location.origin + "/" + nameCleanLower; 
+        const newUrl = "/" + nameCleanLower;
+        return( newUrl ) 
     }
 
     return (
@@ -21,11 +33,13 @@ const ProjectColumn = () => {
             </div>
             <ul className='ProjectColumn_List'>
                 {DataProjects.map((project, index) => {
-                    return <li className='ProjectColumn_List_project' key={index} onClick={() => redirectionUrlForProject(project.name)}>{project.name}</li>
+                    return <li className='ProjectColumn_List_project' key={index}>
+                                <Link to={redirectionUrlForProject(project.name)}>{project.name}</Link> 
+                            </li>
                 })}
             </ul>
         </div>
     )
 }
 
-export default ProjectColumn;
+export default ProjectColumn
