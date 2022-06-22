@@ -30,26 +30,31 @@ const DataProjects = [
         scans: '849',
         url: 'yellowkorner',
         graphs: [
-            {
-                src: 'https://flo.uri.sh/visualisation/10413278/embed',
-            },
-            {
-                src: 'https://flo.uri.sh/visualisation/10414910/embed',
-            },
-            {
-                src: 'https://flo.uri.sh/visualisation/10402622/embed',
-            },
-            {
-                src: 'https://flo.uri.sh/visualisation/10414808/embed',
-            },
+            {src: 'https://flo.uri.sh/visualisation/10413278/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10414910/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10402622/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10414808/embed'},
         ],
         maps: [
-            {
-                src: 'https://flo.uri.sh/visualisation/10415264/embed',
-            },
-            {
-                src: 'https://flo.uri.sh/visualisation/10416329/embed',
-            },
+            {src: 'https://flo.uri.sh/visualisation/10415264/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10416329/embed'},
+        ]
+    },
+    {
+        name: 'Motion Motion',
+        year: '2022',
+        scans: '471',
+        url: 'motionmotion',
+        graphs: [
+            {src: 'https://flo.uri.sh/visualisation/10424059/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10424099/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10424128/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10424141/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10424217/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10424258/embed'},
+        ],
+        maps:[
+           
         ]
     },
 ]
