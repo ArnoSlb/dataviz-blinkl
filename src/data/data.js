@@ -1,4 +1,29 @@
 const DataProjects = [
+    // {
+    //     name: '',
+    //     year: '2022',
+    //     scans: '0',
+    //     url: '',
+    //     graphs: [],
+    //     maps:[]
+    // },
+    {
+        name: 'Art Design Painting',
+        year: '2022',
+        scans: '970',
+        url: 'artdesignpainting',
+        graphs: [
+            {src: 'https://flo.uri.sh/visualisation/10422839/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10422908/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10422959/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10422975/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10423007/embed'},
+        ],
+        maps:[
+            {src: 'https://flo.uri.sh/visualisation/10423126/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10423220/embed'},
+        ]
+    },
     {
         name: 'Yellow Korner',
         year: '2022',
@@ -7,45 +32,25 @@ const DataProjects = [
         graphs: [
             {
                 src: 'https://flo.uri.sh/visualisation/10413278/embed',
-                width : "50%", 
-                height : "300px"
             },
             {
                 src: 'https://flo.uri.sh/visualisation/10414910/embed',
-                width : "50%", 
-                height : "300px"
             },
             {
                 src: 'https://flo.uri.sh/visualisation/10402622/embed',
-                width : "50%", 
-                height : "300px"
             },
             {
                 src: 'https://flo.uri.sh/visualisation/10414808/embed',
-                width : "50%", 
-                height : "300px"
             },
         ],
         maps: [
             {
                 src: 'https://flo.uri.sh/visualisation/10415264/embed',
-                width : "50%", 
-                height : "300px"
             },
             {
                 src: 'https://flo.uri.sh/visualisation/10416329/embed',
-                width : "50%", 
-                height : "300px"
             },
         ]
     },
-    {
-        name: 'Grand Palais',
-        year: '2022',
-        scans: '0',
-        url: 'grandpalais',
-        graphs: [],
-        maps:[]
-    }
 ]
 export default DataProjects

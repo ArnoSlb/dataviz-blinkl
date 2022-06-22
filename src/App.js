@@ -8,8 +8,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>  
-          <Route path="/:project" element={<StatsScreen/>}/>
-          <Route path="/" element={<StatsScreenHome/>}/>
+          <Route path="/blinklstudio_stats/:project" element={<StatsScreen/>}/>
+          <Route path="/blinklstudio_stats/" element={<StatsScreenHome/>}/>
         </Routes>
       </div>
     </Router>

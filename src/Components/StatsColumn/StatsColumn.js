@@ -44,6 +44,7 @@ const StatColumn = () => {
             setProjectMaps(mapsToShow)
         }
 
+        console.log(Params)
         const projectData = DataProjects.filter(Project => Project.url === Params.project)
         const projectScansNb = projectData[0].scans
         setProjectSelected(projectData)

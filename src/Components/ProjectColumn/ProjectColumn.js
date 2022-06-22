@@ -35,7 +35,7 @@ const ProjectColumn = () => {
 
 
     const redirectionUrlForProject = (project) => {
-        const newUrl = "/" + getCleanName(project);
+        const newUrl = "/blinklstudio_stats/" + getCleanName(project);
         return(  newUrl ) 
     }
 
