@@ -47,11 +47,14 @@ const StatColumn = () => {
         console.log(Params)
         const projectData = DataProjects.filter(Project => Project.url === Params.project)
         const projectScansNb = projectData[0].scans
+        const projectUsersNb = projectData[0].users
         setProjectSelected(projectData)
         getGraphs(Params.project)
           
-        const obj = document.getElementById("value");
-        animateValue(obj, 0, projectScansNb, 2000);
+        const valueUsers = document.getElementById("valueUsers");
+        animateValue(valueUsers, 0, projectUsersNb, 2000);
+        const valueScans = document.getElementById("valueScans");
+        animateValue(valueScans, 0, projectScansNb, 2000);
     },[Params])
 
     return(
@@ -66,8 +69,12 @@ const StatColumn = () => {
                     <h1>{projectSelected[0].year}</h1>
                 </div>
                 <div className='StatBox'>
+                    <p>Nbre d'utilisateurs</p>
+                    <h1 id='valueUsers'>{projectSelected[0].users}</h1>
+                </div>
+                <div className='StatBox'>
                     <p>Nbre de scans</p>
-                    <h1 id='value'>{projectSelected[0].scans}</h1>
+                    <h1 id='valueScans'>{projectSelected[0].scans}</h1>
                 </div>
             </div>
             <div className='Graphs_container'>

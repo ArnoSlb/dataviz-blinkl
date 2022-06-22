@@ -3,6 +3,7 @@ const DataProjects = [
     //     name: '',
     //     year: '2022',
     //     scans: '0',
+    //     users: '0'
     //     url: '',
     //     graphs: [],
     //     maps:[]
@@ -11,6 +12,7 @@ const DataProjects = [
         name: 'Art Design Painting',
         year: '2022',
         scans: '970',
+        users: '970',
         url: 'artdesignpainting',
         graphs: [
             {src: 'https://flo.uri.sh/visualisation/10422839/embed'},
@@ -28,6 +30,7 @@ const DataProjects = [
         name: 'Yellow Korner',
         year: '2022',
         scans: '849',
+        users: '849',
         url: 'yellowkorner',
         graphs: [
             {src: 'https://flo.uri.sh/visualisation/10413278/embed'},
@@ -44,6 +47,7 @@ const DataProjects = [
         name: 'Motion Motion',
         year: '2022',
         scans: '471',
+        users: '471',
         url: 'motionmotion',
         graphs: [
             {src: 'https://flo.uri.sh/visualisation/10424059/embed'},
