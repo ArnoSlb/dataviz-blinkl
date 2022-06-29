@@ -65,7 +65,7 @@ const StatColumn = () => {
                     <h1>{projectSelected[0].name}</h1>
                 </div>
                 <div className='StatBox'>
-                    <p>Année du projet</p>
+                    <p>Période du projet</p>
                     <h1>{projectSelected[0].year}</h1>
                 </div>
                 <div className='StatBox'>

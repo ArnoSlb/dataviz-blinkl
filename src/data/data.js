@@ -61,5 +61,22 @@ const DataProjects = [
            
         ]
     },
+    {
+        name: 'Nature en scene',
+        year: 'Du 13 Mai au 28 Juin 2022',
+        scans: '847',
+        users: '83',
+        url: 'natureenscene',
+        graphs: [
+            {src: 'https://flo.uri.sh/visualisation/10498420/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10498494/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10498878/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10498562/embed'},
+            {src: 'https://flo.uri.sh/visualisation/10498854/embed'},
+        ],
+        maps:[
+            {src: 'https://flo.uri.sh/visualisation/10498802/embed'},
+        ]
+    },
 ]
 export default DataProjects
