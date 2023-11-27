@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Data visualisation
+
+The graph were made by Flourish and import in Iframes beacause of the free version.
+You can link embeded graph with living data with premium account.
+
+[https://flo.uri.sh/]
